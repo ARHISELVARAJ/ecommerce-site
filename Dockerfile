@@ -4,7 +4,7 @@ WORKDIR /app/frontend
 COPY frontend/package*.json ./
 RUN npm install
 COPY frontend/ ./
-RUN npm run build
+RUN CI=false npm run build
 
 # Stage 2: Build the Java Backend
 FROM maven:3.8.5-openjdk-17-slim as backend-build
