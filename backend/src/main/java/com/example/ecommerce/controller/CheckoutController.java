@@ -83,7 +83,6 @@ public class CheckoutController {
             Buyer buyer = buyerOpt.get();
             try {
                 SimpleMailMessage message = new SimpleMailMessage();
-                message.setFrom("arhi.24.2007@gmail.com");
                 message.setTo(buyer.getEmail());
                 message.setSubject("Cartify Order Confirmation - #" + savedOrder.getId().substring(0,8).toUpperCase());
                 message.setText("Thank you for your order, " + buyer.getUsername() + "!\n\n" +

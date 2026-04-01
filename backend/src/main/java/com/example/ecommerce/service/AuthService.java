@@ -39,7 +39,6 @@ public class AuthService {
         otpRepository.save(new OTP(cleanEmail, code, 5));
         
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("arhi.24.2007@gmail.com");
         message.setTo(cleanEmail);
         message.setSubject("Your Cartify Verification Code");
         message.setText("Your OTP for Cartify is: " + code + "\nValid for 5 minutes.");

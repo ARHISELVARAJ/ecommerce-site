@@ -142,7 +142,7 @@ const Register: React.FC = () => {
                 <input 
                   type="email" 
                   className="input-field" 
-                  placeholder="arhi.24.2007@gmail.com"
+                  placeholder="user@example.com"
                   value={formData.email} 
                   onChange={(e) => setFormData({...formData, email: e.target.value})} 
                   required 
